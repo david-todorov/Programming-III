@@ -1,0 +1,93 @@
+\hypertarget{_test_8cpp}{}\doxysection{Test.\+cpp File Reference}
+\label{_test_8cpp}\index{Test.cpp@{Test.cpp}}
+
+
+This program gets input from the user which is about Articles in imaginary warehouse and puts the data in \char`\"{}record\char`\"{} file in abular form.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Article.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Stock.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{_test_8cpp_a7c6cbcdb1b39c2e81e1569c81c953a32}{adding\+White\+Spaces}} (int n)
+\begin{DoxyCompactList}\small\item\em This functions adds white spaces n times. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em This functions creates a stream to local file and inserts the information in tabular form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This program gets input from the user which is about Articles in imaginary warehouse and puts the data in \char`\"{}record\char`\"{} file in abular form. 
+
+\begin{DoxyAuthor}{Author}
+David Todorov 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_test_8cpp_a7c6cbcdb1b39c2e81e1569c81c953a32}\label{_test_8cpp_a7c6cbcdb1b39c2e81e1569c81c953a32}} 
+\index{Test.cpp@{Test.cpp}!addingWhiteSpaces@{addingWhiteSpaces}}
+\index{addingWhiteSpaces@{addingWhiteSpaces}!Test.cpp@{Test.cpp}}
+\doxysubsubsection{\texorpdfstring{addingWhiteSpaces()}{addingWhiteSpaces()}}
+{\footnotesize\ttfamily string adding\+White\+Spaces (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+This functions adds white spaces n times. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Number of white spaces to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String which consists of n white paces 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Test.cpp@{Test.cpp}!main@{main}}
+\index{main@{main}!Test.cpp@{Test.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This functions creates a stream to local file and inserts the information in tabular form. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+Number of entities which will be inserted
+
+Opening the stream to local file record
+
+Deleting all previous records of this file
+
+Creating the header of the table
+
+Getting the number of an \mbox{\hyperlink{class_article}{Article}}
+
+Getting the description of an \mbox{\hyperlink{class_article}{Article}}
+
+Getting the actual stock of a \mbox{\hyperlink{class_stock}{Stock}}
+
+Getting the maximum stock of a \mbox{\hyperlink{class_stock}{Stock}}
+
+Getting the price of a \mbox{\hyperlink{class_stock}{Stock}}
+
+Getting the consumption of a \mbox{\hyperlink{class_stock}{Stock}}
+
+Getting the order of duration of a \mbox{\hyperlink{class_stock}{Stock}}
+
+Calculating total price, but it is never used
+
+Calculating the reorder\+Point
+
+Creating the objects \mbox{\hyperlink{class_article}{Article}} and \mbox{\hyperlink{class_stock}{Stock}}
+
+Creating string with format \char`\"{}$\vert$ \{var\}    \char`\"{}, where the white spaces are calculated using the header colum length minus the number of digit or characters
+
+Adding the entities\textquotesingle{} information into the table as single row
+
+This is for input pupose to separate the lines in the console

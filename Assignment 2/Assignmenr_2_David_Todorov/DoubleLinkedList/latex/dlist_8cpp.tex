@@ -1,0 +1,83 @@
+\hypertarget{dlist_8cpp}{}\doxysection{dlist.\+cpp File Reference}
+\label{dlist_8cpp}\index{dlist.cpp@{dlist.cpp}}
+{\ttfamily \#include \char`\"{}dlist.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dlist_8cpp_a03c6f7b4c8657d58eaa67772ec2d2077}{initialize\+DList}} (\mbox{\hyperlink{struct_d_list}{DList}} \&dl)
+\item 
+void \mbox{\hyperlink{dlist_8cpp_a8394382bf547380b7f86faf31634694b}{put}} (\mbox{\hyperlink{struct_d_list}{DList}} \&dl, int val)
+\begin{DoxyCompactList}\small\item\em Adding element. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{dlist_8cpp_a98fa9cf9e2fcd77d6dbc3165834ef066}{get}} (\mbox{\hyperlink{struct_d_list}{DList}} \&dl, int \&val)
+\begin{DoxyCompactList}\small\item\em Returns value from the end of the list. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{dlist_8cpp_a75617812139a690ef9eabe39d8b6acf1}{is\+Empty}} (\mbox{\hyperlink{struct_d_list}{DList}} dl)
+\begin{DoxyCompactList}\small\item\em Checks wheather a List is empty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{dlist_8cpp_a98fa9cf9e2fcd77d6dbc3165834ef066}\label{dlist_8cpp_a98fa9cf9e2fcd77d6dbc3165834ef066}} 
+\index{dlist.cpp@{dlist.cpp}!get@{get}}
+\index{get@{get}!dlist.cpp@{dlist.cpp}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily bool get (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_list}{DList}} \&}]{dl,  }\item[{int \&}]{val }\end{DoxyParamCaption})}
+
+
+
+Returns value from the end of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dl} & \\
+\hline
+{\em val} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when is possible a.\+k.\+a. when the list is not empty 
+
+false when is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dlist_8cpp_a03c6f7b4c8657d58eaa67772ec2d2077}\label{dlist_8cpp_a03c6f7b4c8657d58eaa67772ec2d2077}} 
+\index{dlist.cpp@{dlist.cpp}!initializeDList@{initializeDList}}
+\index{initializeDList@{initializeDList}!dlist.cpp@{dlist.cpp}}
+\doxysubsubsection{\texorpdfstring{initializeDList()}{initializeDList()}}
+{\footnotesize\ttfamily void initialize\+DList (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_list}{DList}} \&}]{dl }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{dlist_8cpp_a75617812139a690ef9eabe39d8b6acf1}\label{dlist_8cpp_a75617812139a690ef9eabe39d8b6acf1}} 
+\index{dlist.cpp@{dlist.cpp}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!dlist.cpp@{dlist.cpp}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool is\+Empty (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_list}{DList}}}]{dl }\end{DoxyParamCaption})}
+
+
+
+Checks wheather a List is empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dl} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when is empty 
+
+false when is not empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dlist_8cpp_a8394382bf547380b7f86faf31634694b}\label{dlist_8cpp_a8394382bf547380b7f86faf31634694b}} 
+\index{dlist.cpp@{dlist.cpp}!put@{put}}
+\index{put@{put}!dlist.cpp@{dlist.cpp}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily void put (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_d_list}{DList}} \&}]{dl,  }\item[{int}]{val }\end{DoxyParamCaption})}
+
+
+
+Adding element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dl} & \\
+\hline
+{\em val} & value to be inserted \\
+\hline
+\end{DoxyParams}

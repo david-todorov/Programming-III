@@ -1,0 +1,91 @@
+\hypertarget{_list_8cpp}{}\doxysection{List.\+cpp File Reference}
+\label{_list_8cpp}\index{List.cpp@{List.cpp}}
+
+
+Some functionalities for single linked list.  
+
+
+{\ttfamily \#include \char`\"{}List.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_list_8cpp_a6f22f374ed258de1a53e14fc309a5c80}{print\+List}} (\mbox{\hyperlink{struct_list_elem}{List}} lst)
+\begin{DoxyCompactList}\small\item\em Printing the list\textquotesingle{}s elements on one line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_list_8cpp_accb823f5efca937048cf2cb3aa786848}{insert\+Last}} (\mbox{\hyperlink{struct_list_elem}{List}} \&lst, int info)
+\begin{DoxyCompactList}\small\item\em Inserting an element at the very end of the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_list_8cpp_aac13cf1c5328fe5b2358c60e8718a0f4}{reverse\+List}} (\mbox{\hyperlink{struct_list_elem}{List}} \&lst)
+\begin{DoxyCompactList}\small\item\em Reversing the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Some functionalities for single linked list. 
+
+\begin{DoxyAuthor}{Author}
+David Todorov  
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_list_8cpp_accb823f5efca937048cf2cb3aa786848}\label{_list_8cpp_accb823f5efca937048cf2cb3aa786848}} 
+\index{List.cpp@{List.cpp}!insertLast@{insertLast}}
+\index{insertLast@{insertLast}!List.cpp@{List.cpp}}
+\doxysubsubsection{\texorpdfstring{insertLast()}{insertLast()}}
+{\footnotesize\ttfamily void insert\+Last (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list_elem}{List}} \&}]{lst,  }\item[{int}]{info }\end{DoxyParamCaption})}
+
+
+
+Inserting an element at the very end of the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lst} & \\
+\hline
+{\em info} & \\
+\hline
+\end{DoxyParams}
+If the list is empty the pointer to the list points to the first element
+
+Creating the variable for the start of the list
+
+Iterating until finding the last element
+
+Assigning the last\+Element.\+next to the freshly created element
+
+It needs to point back to the begining\mbox{\Hypertarget{_list_8cpp_a6f22f374ed258de1a53e14fc309a5c80}\label{_list_8cpp_a6f22f374ed258de1a53e14fc309a5c80}} 
+\index{List.cpp@{List.cpp}!printList@{printList}}
+\index{printList@{printList}!List.cpp@{List.cpp}}
+\doxysubsubsection{\texorpdfstring{printList()}{printList()}}
+{\footnotesize\ttfamily void print\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list_elem}{List}}}]{lst }\end{DoxyParamCaption})}
+
+
+
+Printing the list\textquotesingle{}s elements on one line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lst} & The list \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_list_8cpp_aac13cf1c5328fe5b2358c60e8718a0f4}\label{_list_8cpp_aac13cf1c5328fe5b2358c60e8718a0f4}} 
+\index{List.cpp@{List.cpp}!reverseList@{reverseList}}
+\index{reverseList@{reverseList}!List.cpp@{List.cpp}}
+\doxysubsubsection{\texorpdfstring{reverseList()}{reverseList()}}
+{\footnotesize\ttfamily void reverse\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list_elem}{List}} \&}]{lst }\end{DoxyParamCaption})}
+
+
+
+Reversing the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lst} & \\
+\hline
+\end{DoxyParams}
+If the list consists of more than one element
+
+Creating pointers such as previous, current and next element
+
+Swapping the directions
+
+Assigning the new value to the lst

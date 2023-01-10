@@ -1,0 +1,49 @@
+\hypertarget{_vector_8cpp}{}\doxysection{C\+:/\+Users/david/\+VS Code Workspace/\+Programming III/\+Assignment 4/\+Vector.cpp File Reference}
+\label{_vector_8cpp}\index{C:/Users/david/VS Code Workspace/Programming III/Assignment 4/Vector.cpp@{C:/Users/david/VS Code Workspace/Programming III/Assignment 4/Vector.cpp}}
+
+
+This is the \mbox{\hyperlink{class_vector}{Vector}} class, which implements simple \mbox{\hyperlink{class_vector}{Vector}} functionalities.  
+
+
+{\ttfamily \#include \char`\"{}Vector.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for Vector.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{_vector_8cpp_a5ac0ec6231e3a2373858162eb0959dd8}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_vector}{Vector}} \&other)
+\begin{DoxyCompactList}\small\item\em Overloading the operator \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} with format (el1, el2, el3, ...) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_vector_8cpp_a2ea92855217d17ce63cedb811d686361}\label{_vector_8cpp_a2ea92855217d17ce63cedb811d686361}} 
+const int {\bfseries DEF\+\_\+\+DIM} = 2
+\begin{DoxyCompactList}\small\item\em Two constanst which are used when some of the parameters ar omitted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_vector_8cpp_a94ae223c987eb9192045c9d615ec5129}\label{_vector_8cpp_a94ae223c987eb9192045c9d615ec5129}} 
+const double {\bfseries DEF\+\_\+\+INITVALUE} = 0.\+0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the \mbox{\hyperlink{class_vector}{Vector}} class, which implements simple \mbox{\hyperlink{class_vector}{Vector}} functionalities. 
+
+\begin{DoxyAuthor}{Author}
+David Todorov 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_vector_8cpp_a5ac0ec6231e3a2373858162eb0959dd8}\label{_vector_8cpp_a5ac0ec6231e3a2373858162eb0959dd8}} 
+\index{Vector.cpp@{Vector.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Vector.cpp@{Vector.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_vector}{Vector}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Overloading the operator \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} with format (el1, el2, el3, ...) 
+
+\begin{DoxyReturn}{Returns}
+formated stream 
+\end{DoxyReturn}

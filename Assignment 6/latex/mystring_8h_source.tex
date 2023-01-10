@@ -1,0 +1,89 @@
+\hypertarget{mystring_8h_source}{}\doxysection{mystring.\+h}
+\mbox{\hyperlink{mystring_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * mystring.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ *}}
+\DoxyCodeLine{4 \textcolor{comment}{ */}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef MYSTRING\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define MYSTRING\_H}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <cstdlib>}  \textcolor{comment}{// to have size\_t}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacestringexercise}{stringexercise}} \{}
+\DoxyCodeLine{12     \textcolor{keyword}{class }\mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}} \{}
+\DoxyCodeLine{13     \textcolor{keyword}{public}:}
+\DoxyCodeLine{14         \textcolor{comment}{// constructors}}
+\DoxyCodeLine{15         \mbox{\hyperlink{classstringexercise_1_1mystring_a4fe3682d128b12b34dd90617c8e3f5a3}{mystring}}(); \textcolor{comment}{//done}}
+\DoxyCodeLine{16         \mbox{\hyperlink{classstringexercise_1_1mystring_a4fe3682d128b12b34dd90617c8e3f5a3}{mystring}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} str[ ]); \textcolor{comment}{//done}}
+\DoxyCodeLine{17         \mbox{\hyperlink{classstringexercise_1_1mystring_a4fe3682d128b12b34dd90617c8e3f5a3}{mystring}}( \textcolor{keyword}{const} std::string str ); \textcolor{comment}{//done}}
+\DoxyCodeLine{18         \mbox{\hyperlink{classstringexercise_1_1mystring_a4fe3682d128b12b34dd90617c8e3f5a3}{mystring}}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& source); \textcolor{comment}{//done}}
+\DoxyCodeLine{19         \textcolor{keyword}{virtual} \mbox{\hyperlink{classstringexercise_1_1mystring_aeff59ad894893e9d41972b66fa9e42f8}{\string~mystring}}( ); \textcolor{comment}{//done}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21         \textcolor{comment}{// modifying member functions}}
+\DoxyCodeLine{22         \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& \mbox{\hyperlink{classstringexercise_1_1mystring_a57a90a1e5062d902a998972c675accf2}{operator+=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& addend); \textcolor{comment}{//done}}
+\DoxyCodeLine{23         \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& \mbox{\hyperlink{classstringexercise_1_1mystring_a57a90a1e5062d902a998972c675accf2}{operator+=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} addend[]); \textcolor{comment}{//done}}
+\DoxyCodeLine{24         \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& \mbox{\hyperlink{classstringexercise_1_1mystring_a57a90a1e5062d902a998972c675accf2}{operator+=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char} addend); \textcolor{comment}{//done}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26         \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& \mbox{\hyperlink{classstringexercise_1_1mystring_ab3247abc2010f6fa7064bd776951c15a}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& source); \textcolor{comment}{//done}}
+\DoxyCodeLine{27         \textcolor{comment}{// char at a distinct position}}
+\DoxyCodeLine{28         \textcolor{keyword}{const} \textcolor{keywordtype}{char}\& \mbox{\hyperlink{classstringexercise_1_1mystring_aefd03ee12e0a79bc482008d88467616e}{operator[ ]}}(\textcolor{keywordtype}{size\_t} position) \textcolor{keyword}{const};  \textcolor{comment}{//done }}
+\DoxyCodeLine{29         \textcolor{comment}{// char at a distinct position}}
+\DoxyCodeLine{30         \textcolor{keywordtype}{char}\& \mbox{\hyperlink{classstringexercise_1_1mystring_aefd03ee12e0a79bc482008d88467616e}{operator[ ]}}(\textcolor{keywordtype}{size\_t} position);  \textcolor{comment}{//done           }}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33         \textcolor{comment}{// constant member functions which do not change the state of the object}}
+\DoxyCodeLine{34         std::size\_t \mbox{\hyperlink{classstringexercise_1_1mystring_aa873149b7c8a44ac8da4e75865f3e1ad}{length}}( )\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} occupied; \} \textcolor{comment}{// return number of characters}}
+\DoxyCodeLine{35         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{classstringexercise_1_1mystring_a0f04ae731a5a44b95798ec16a1897e7b}{c\_str}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} sequence; \}  \textcolor{comment}{// return text as a C-\/string}}
+\DoxyCodeLine{36         \textcolor{keywordtype}{void} \mbox{\hyperlink{classstringexercise_1_1mystring_acb2f2dc2feed17976f64c0cf55104b59}{swap}}(\mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\&);                            \textcolor{comment}{// exchange of two strings}}
+\DoxyCodeLine{37         \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstringexercise_1_1mystring_a4e551e387b58182790ea16ecab93cee6}{is\_empty}}()\{ \textcolor{keywordflow}{return} (occupied == 0); \}       \textcolor{comment}{// check if empty}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39         \textcolor{comment}{// friends}}
+\DoxyCodeLine{40         \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{classstringexercise_1_1mystring_ab39e46eacd5e2e93ad8a25f068b29e4b}{operator <<}}(std::ostream\& outs, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& source); }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstringexercise_1_1mystring_a5bbc5ede2a964c428e44493e4b86c4b8}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s2);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44         \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstringexercise_1_1mystring_af0c4d5f14cc1900a34a15eec0db686d2}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \textcolor{keywordtype}{char} str[]);}
+\DoxyCodeLine{45         }
+\DoxyCodeLine{46         \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstringexercise_1_1mystring_ac701dd2e0b6e0ec8b3d4c5f6896ac19c}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s2);}
+\DoxyCodeLine{47         \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstringexercise_1_1mystring_a1c1a5310b20c9c7730c683252b75332b}{operator>=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s2);}
+\DoxyCodeLine{48         \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstringexercise_1_1mystring_a39a6849a19c526e04e57408b0905e582}{operator<=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s2);}
+\DoxyCodeLine{49         \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstringexercise_1_1mystring_a739cfeab47b0ff5b54d4b15497e8dd0d}{operator> }}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s2);}
+\DoxyCodeLine{50         \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classstringexercise_1_1mystring_a915f18bf92b90d0a2518d7a9a061626a}{operator< }}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s2);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{keyword}{private}:}
+\DoxyCodeLine{53         \textcolor{keywordtype}{size\_t} occupied; \textcolor{comment}{// current number of characters}}
+\DoxyCodeLine{54         \textcolor{keywordtype}{size\_t} capacity; \textcolor{comment}{// maximum number of characters}}
+\DoxyCodeLine{55         \textcolor{keywordtype}{char} * sequence;     \textcolor{comment}{// pointer to the beginning of the string array}}
+\DoxyCodeLine{56         \textcolor{keywordtype}{void} resize();}
+\DoxyCodeLine{57         \textcolor{keywordtype}{void} insertSequanceAt(\textcolor{keywordtype}{int} from, \textcolor{keywordtype}{int} lenght,\textcolor{keyword}{const} \textcolor{keywordtype}{char} * sequence);}
+\DoxyCodeLine{58     \};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{comment}{// Prototype declarations of NON-\/MEMBER functions}}
+\DoxyCodeLine{61     \textcolor{comment}{// to be used in context with class mystring}}
+\DoxyCodeLine{62     \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}} \mbox{\hyperlink{namespacestringexercise_a931d6cd32033f312cadbed323107b62f}{operator+}}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s2); \textcolor{comment}{//done}}
+\DoxyCodeLine{63     \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}} \mbox{\hyperlink{namespacestringexercise_a931d6cd32033f312cadbed323107b62f}{operator+}}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* s2 ); \textcolor{comment}{//done}}
+\DoxyCodeLine{64     \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}} \mbox{\hyperlink{namespacestringexercise_a931d6cd32033f312cadbed323107b62f}{operator+}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* s1, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s2); \textcolor{comment}{//done}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacestringexercise_a928b077d1e433a6a8c3edccfc3e423b2}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s2); \textcolor{comment}{//done}}
+\DoxyCodeLine{67     \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacestringexercise_a928b077d1e433a6a8c3edccfc3e423b2}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \textcolor{keywordtype}{char} str[]); }
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacestringexercise_af5f8f454583f8c885f88af2f54700422}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s2); \textcolor{comment}{//done}}
+\DoxyCodeLine{70     \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacestringexercise_a89bf14e7e212f9c44ece34858234bf41}{operator>=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s2);\textcolor{comment}{// done}}
+\DoxyCodeLine{71     \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacestringexercise_a3b98fae295cc41b6822ad98abb4d8295}{operator<=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s2);\textcolor{comment}{//done}}
+\DoxyCodeLine{72     \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacestringexercise_aecf9f2fced3247fbac4eebaf35bd6dff}{operator> }}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s2); \textcolor{comment}{//done}}
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespacestringexercise_ab20701a73ad10b00b287cc3c68318fb4}{operator< }}(\textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s1, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& s2); \textcolor{comment}{//done}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75     std::ostream\& \mbox{\hyperlink{namespacestringexercise_a0f0fa44fac71dbc84b48d09c0d5d4cb2}{operator<<}}(std::ostream\& outs, \textcolor{keyword}{const} \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& source); \textcolor{comment}{//done}}
+\DoxyCodeLine{76     std::istream\& \mbox{\hyperlink{namespacestringexercise_a060f6b5d8aab037d8103d97835d21b69}{operator>>}}(std::istream\& ins, \mbox{\hyperlink{classstringexercise_1_1mystring}{mystring}}\& target); \textcolor{comment}{//done}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \} \textcolor{comment}{/* end namespace stringexercise */}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 }
+
+\end{DoxyCode}

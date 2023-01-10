@@ -1,0 +1,29 @@
+\hypertarget{_bibliography_8h_source}{}\doxysection{Bibliography.\+h}
+\label{_bibliography_8h_source}\index{C:/Users/david/VS Code Workspace/Programming III/Assignment 5/Bibliography.h@{C:/Users/david/VS Code Workspace/Programming III/Assignment 5/Bibliography.h}}
+\mbox{\hyperlink{_bibliography_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef BIBLIOGRAPHY\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define BIBLIOGRAPHY\_H}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_medium_8h}{Medium.h}}"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_bibliography}{Bibliography}}\{}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{16         \textcolor{keyword}{private}:}
+\DoxyCodeLine{17                 \textcolor{keywordtype}{int} index; \textcolor{comment}{//* Points to the last inserted element}}
+\DoxyCodeLine{18                 \textcolor{keywordtype}{int} internalSize; \textcolor{comment}{//* Maximum capacity of the collection}}
+\DoxyCodeLine{19                 \mbox{\hyperlink{class_medium}{Medium}}* mediumData[]; \textcolor{comment}{//*Array of pointers, the collection itself}}
+\DoxyCodeLine{20                 }
+\DoxyCodeLine{21                 }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23         \textcolor{keyword}{public}:}
+\DoxyCodeLine{24                 \mbox{\hyperlink{class_bibliography}{Bibliography}}(\textcolor{keywordtype}{int} size);}
+\DoxyCodeLine{25                }
+\DoxyCodeLine{31                 \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bibliography_ab2f46e5a3eba14c5ed243e5296f5bbd7}{insert}}( \mbox{\hyperlink{class_medium}{Medium}} *media);}
+\DoxyCodeLine{38                 \mbox{\hyperlink{class_medium}{Medium}}* \mbox{\hyperlink{class_bibliography_a9d0833f9b31459bc5268df45a56f93ca}{operator[] }}(\textcolor{keywordtype}{string} abbr);}
+\DoxyCodeLine{43                 \textcolor{keyword}{friend} ostream\& \mbox{\hyperlink{class_bibliography_a4c39443993d6c1b2405fb320a43f8a9d}{operator<<}}(ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{class_bibliography}{Bibliography}}\& bibliography);}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
