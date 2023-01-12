@@ -1,86 +1,108 @@
+/**
+ * @file main.cpp
+ * @author your name David Todorov
+ * @brief Small program which gives basic functionalities of vocabulary training
+ */
 #include <iostream>
 #include <map>
 #include <string>
-#include <stdlib.h>     /* srand, rand */
-#include <time.h>       /* time */
 
 using namespace std;
 
+int main()
+{
+	
 
+	/**
+	 * @brief Initialization of the dictionary
+	 * 
+	 */
+	multimap<string, string> dictionary;
+	dictionary.insert(pair<string, string>("week", "die Woche"));
+	dictionary.insert(pair<string, string>("year", "das Jahr"));
+	dictionary.insert(pair<string, string>("Calender", "der Kalender"));
+	dictionary.insert(pair<string, string>("second", "die Sekunde"));
+	dictionary.insert(pair<string, string>("hour", "die Stunde"));
+	dictionary.insert(pair<string, string>("minute", "die Minute"));
+	dictionary.insert(pair<string, string>("o'clock", "die Uhr"));
+	dictionary.insert(pair<string, string>("use", "benutzen"));
+	dictionary.insert(pair<string, string>("go", "gehen"));
+	dictionary.insert(pair<string, string>("laugh", "lachen"));
+	dictionary.insert(pair<string, string>("make", "machen"));
+	dictionary.insert(pair<string, string>("see", "sehen"));
+	dictionary.insert(pair<string, string>("far", "weit"));
+	dictionary.insert(pair<string, string>("small", "klein"));
+	dictionary.insert(pair<string, string>("beautiful", "schön"));
+	dictionary.insert(pair<string, string>("hard", "schwierig"));
+	dictionary.insert(pair<string, string>("bad", "schlecht"));
+	dictionary.insert(pair<string, string>("near", "nahe"));
+	dictionary.insert(pair<string, string>("hello", "hallo"));
 
-int main() {
-	srand(time(NULL));
+    multimap<string, string>::iterator iter;
 
-	multimap<string, string> vocTrainer;
-	vocTrainer.insert(pair<string, string>("date", "das Datum"));
-	vocTrainer.insert(pair<string, string>("date", "das Date"));
-	vocTrainer.insert(pair<string, string>("bite", "beissen"));
+	/**
+	 * @brief Asking the user from which to which language would like to train 
+	 * 
+	 */
+	cout << "Welcome to our vocabulary training, please follow the instructions" << endl;
+	cout << "---------------------------------------------" << endl;
+	cout << "Please choose from which language to which you would like to train." << endl;
+	cout << "Available options are from English to German and from German to English e.g. type E-G or G-E" << endl;
+	string fromTo;
+	getline(cin, fromTo);
+	if (fromTo == "E-G")
+	{
+		cout << "Congratulations you have choosen from English to German" << endl;
+		cout << endl;
+		/**
+		 * @brief Iterating over the dictionary
+		 * 
+		 */
+		for (iter = dictionary.begin(); iter != dictionary.end(); iter++)
+		{
 
-	vocTrainer.insert(pair<string, string>("read", "lesen"));
-	vocTrainer.insert(pair<string, string>("afford", "leisten"));
-	vocTrainer.insert(pair<string, string>("adapt", "anpassen"));
-	vocTrainer.insert(pair<string, string>("compare", "vergleichen"));
-	vocTrainer.insert(pair<string, string>("voice", "die Stimme"));
-	vocTrainer.insert(pair<string, string>("last", "zuletzt"));
-	vocTrainer.insert(pair<string, string>("last", "dauern"));
-
-	// this is how you iterate the map however the multiple values of 1 key are duplicated
-//	multimap<string, string>::iterator iter;
-//	string s;
-//	for (iter = vocTrainer.begin(); iter != vocTrainer.end(); ++iter) {
-//		s = iter->first;
-//		pair<multimap<string, string>::iterator, multimap<string, string>::iterator> range = vocTrainer.equal_range(s);
-//		 for (std::multimap<string,string>::iterator it=range.first; it!=range.second; ++it)
-//		      std::cout <<it->first<< ' ' << it->second<<endl;
-//
-//	}
-	int a = 0;
-	string index;
-	multimap<string, string>::iterator iter;
-	for (iter = vocTrainer.begin(); iter != vocTrainer.end(); ++iter) {
-
-		a = rand() % 2 + 1;
-		if (a == 1) {
-			index = iter->first;
-		} else {
-			index = iter->second;
+			cout << "Please write the folowing word in German plus the artikel -> " << iter->first << endl;
+			string userWord;
+			std::getline(cin, userWord);
+			if (userWord == iter->second)
+			{
+				cout << "Congratulations the translation is right!" << endl;
+			}
+			else
+			{
+				cout << "Ooops wrong answer..." << endl;
+				cout << "The right answer is -> " << iter->second << endl;
+			}
+			cout << "---------------------------------------------" << endl;
 		}
-		cout << index << "    please enter translation: " << endl;
-		string userInput;
-		getline(cin, userInput);
-		if (a == 2) {
-			if (userInput.compare(iter->first) == 0)
-				cout << "True " << endl;
-			else {
-				cout << "False the correct is: " << iter->first << endl;
-			}
-		} else {
-			// this way I can extract multiple values attached to one key
-			pair<multimap<string, string>::iterator,
-					multimap<string, string>::iterator> range =
-					vocTrainer.equal_range(iter->first);
-			//some basic programflow functionalities
-			bool flag = false;
-			for (std::multimap<string, string>::iterator it = range.first;
-					it != range.second; ++it) {
-				if (userInput.compare(it->second) == 0) {
-					cout << "True " << endl;
-					flag = true;
-					break;
-				}
-			}
-			if (flag == true) {
-				cout << "also correct answers are : ";
-			} else {
-				cout << "False the correct answers are: ";
-			}
-			for (std::multimap<string, string>::iterator it = range.first;
-					it != range.second; ++it) {
-				cout << " " << it->second;
-			}
-			cout << endl;
+		
+	}
+	else if (fromTo == "G-E")
+	{
+		cout << "Congratulations you have choosen from German to English" << endl;
+		cout << endl;
+		/**
+		 * @brief Iterating over the dictionary
+		 * 
+		 */
+		for (iter = dictionary.begin(); iter != dictionary.end(); iter++)
+		{
 
+			cout << "Please write the folowing word in English -> " << iter->second << endl;
+			string userWord;
+			std::getline(cin, userWord);
+			if (userWord == iter->first)
+			{
+				cout << "Congratulations the translation is right!" << endl;
+			}
+			else
+			{
+				cout << "Ooops wrong answer..." << endl;
+				cout << "The right answer is -> " << iter->first << endl;
+			}
+			cout << "---------------------------------------------" << endl;
 		}
 	}
+	cout << "Your training is done... bye bye!!!" << endl;
 	return 0;
 }
